@@ -33,7 +33,7 @@ function useHtmlTexture(config: VinylConfig) {
 
   useEffect(() => {
     const canvas = document.createElement('canvas');
-    canvas.width = 0;
+    canvas.width = 450;
     canvas.height = 300;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -107,7 +107,7 @@ function FlipCard({ config, onConfigChange }: { config: VinylConfig; onConfigCha
   const showBack = flipped;
 
   return (
-    <group ref={groupRef} position={[0, 0, 0]}>
+    <group ref={groupRef} position={[0, 0, 0.9]}>
       {/* Cara frontal - Configuración */}
       <group visible={showFront}>
         <mesh rotation={[0, 0, 0]}>
